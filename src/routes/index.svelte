@@ -27,7 +27,7 @@
 		liff = l.default;
 		liff
 			.init({
-				liffId: '1656877783-K9rxx5NY'
+				liffId: '1656984897-84oW2nrm'
 				// withLoginOnExternalBrowser: true
 			})
 			.then(() => {

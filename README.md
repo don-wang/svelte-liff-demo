@@ -1,20 +1,8 @@
-# create-svelte
+# A Demo LIFF App build with Svelte Kit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Demo
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
+You can try it by open this [LIFF URL](https://liff.line.me/1656984897-84oW2nrm) inside of LINE.
 
 ## Developing
 
