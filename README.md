@@ -2,7 +2,8 @@
 
 ## Demo
 
-You can try it by open this LIFF URL[https://liff.line.me/1656984897-84oW2nrm](https://liff.line.me/1656984897-84oW2nrm) inside of LINE.
+You can try it by open this LIFF URL [https://liff.line.me/1656984897-84oW2nrm](https://liff.line.me/1656984897-84oW2nrm) inside of LINE.
+The app itself is hosing in vercel: https://svelte-liff-demo.vercel.app/
 
 ## Developing
 
