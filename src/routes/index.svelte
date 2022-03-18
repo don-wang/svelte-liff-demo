@@ -55,7 +55,7 @@
 				console.log(err);
 			});
 		if (!liff.isInClient()) {
-			errorMessage = 'アプリを利用するにはLINEで開く必要があります';
+			errorMessage = 'You need to open this link in line';
 		}
 	});
 
@@ -78,14 +78,14 @@
 								contents: [
 									{
 										type: 'image',
-										url: 'https://i.pinimg.com/originals/97/05/62/970562dc32d225014f2b4d1ee9dc008c.png',
+										url: 'https://d.line-scdn.net/n/_s1/_0/linecorp-web-uit/images/line_icon_200_v3.jpg',
 										margin: 'none',
 										offsetTop: 'md',
 										offsetBottom: 'md'
 									},
 									{
 										type: 'image',
-										url: 'https://mitsui-shopping-park.com/lalaport/common/image/svg/logo.svg',
+										url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png',
 										margin: 'none',
 										offsetTop: 'md',
 										offsetBottom: 'md',
@@ -96,17 +96,7 @@
 							},
 							{
 								type: 'text',
-								text: 'ららぽーと福岡行き無料券',
-								weight: 'bold',
-								size: '28px',
-								margin: 'xxl',
-								align: 'center',
-								wrap: false,
-								color: '#275aa3'
-							},
-							{
-								type: 'text',
-								text: '西鉄大橋駅 → ららぽーと福岡駅',
+								text: 'Have a good day',
 								align: 'center',
 								margin: 'xxl',
 								size: 'xl',
@@ -114,7 +104,7 @@
 							},
 							{
 								type: 'text',
-								text: `${today} 最終バスまで有効`,
+								text: `Today is ${today} `,
 								align: 'center',
 								margin: 'xl',
 								size: 'xl',
@@ -130,13 +120,8 @@
 								contents: [
 									{
 										type: 'text',
-										text: '降車時に乗務員が確認します。',
+										text: 'Good luck with Svelte and LIFF',
 										wrap: true,
-										align: 'center'
-									},
-									{
-										type: 'text',
-										text: 'しっかりご提示ください。',
 										align: 'center'
 									}
 								],
@@ -194,22 +179,14 @@
 					<Content>
 						<Group>
 							<Button on:click={() => sendMessage()} variant="raised" class="button-shaped-round">
-								<Label>チケット発券</Label>
+								<Label>Send Message</Label>
 							</Button>
 						</Group>
 						<Group>
 							<Button on:click={closeWindow} variant="raised" class="button-shaped-round">
-								<Label>閉じる</Label>
+								<Label>Close</Label>
 							</Button>
-							<Button
-								on:click={sendMessage}
-								disabled
-								variant="raised"
-								class="liffBtn button-shaped-round"
-							>
-								<Label>発券済み</Label>
-							</Button></Group
-						>
+						</Group>
 					</Content>
 				</Card>
 			</div>
@@ -218,7 +195,7 @@
 			<div class="card-container">
 				<Card>
 					<Content>
-						<h2>ユーザー情報</h2>
+						<h2>User Info</h2>
 						<List twoLine nonInteractive>
 							<Item>
 								<Graphic class="material-icons">gps_fixed</Graphic>
@@ -248,11 +225,11 @@
 			<div class="card-container">
 				<Card>
 					<Content>
-						<h2>LIFF 環境情報</h2>
+						<h2>LIFF Info</h2>
 						<List twoLine nonInteractive>
 							<Item>
 								<Text>
-									<PrimaryText>言語設定</PrimaryText>
+									<PrimaryText>Language</PrimaryText>
 									<SecondaryText>
 										{liffInfo.lang}</SecondaryText
 									>
@@ -260,19 +237,19 @@
 							</Item>
 							<Item>
 								<Text>
-									<PrimaryText>LIFFバージョン</PrimaryText>
+									<PrimaryText>LIFF Ver</PrimaryText>
 									<SecondaryText>{liffInfo.ver}</SecondaryText>
 								</Text>
 							</Item>
 							<Item>
 								<Text>
-									<PrimaryText>LIFFブラウザ</PrimaryText>
+									<PrimaryText>LIFF Browser</PrimaryText>
 									<SecondaryText>{liffInfo.isInClient}</SecondaryText>
 								</Text>
 							</Item>
 							<Item>
 								<Text>
-									<PrimaryText>ログイン</PrimaryText>
+									<PrimaryText>Login Status</PrimaryText>
 									<SecondaryText>{liffInfo.isLoggedIn}</SecondaryText>
 								</Text>
 							</Item>
@@ -284,7 +261,7 @@
 							</Item>
 							<Item>
 								<Text>
-									<PrimaryText>LINEバージョン</PrimaryText>
+									<PrimaryText>LINE Ver</PrimaryText>
 									<SecondaryText>{liffInfo.lineVer}</SecondaryText>
 								</Text>
 							</Item>
