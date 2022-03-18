@@ -1,0 +1,38 @@
+{
+	"name": "liff-demo",
+	"version": "0.0.1",
+	"scripts": {
+		"dev1": "svelte-kit dev",
+		"dev": "svelte-kit dev --host 0.0.0.0",
+		"prepare": "npm run smui-theme",
+		"smui-theme": "smui-theme compile static/smui.css -i src/theme",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@smui/button": "^6.0.0-beta.13",
+		"@smui/card": "^6.0.0-beta.13",
+		"@smui/layout-grid": "^6.0.0-beta.13",
+		"@smui/list": "^6.0.0-beta.13",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^3.2.1",
+		"focus-visible": "^5.2.0",
+		"prettier": "^2.4.1",
+		"prettier-plugin-svelte": "^2.4.0",
+		"smui-theme": "^6.0.0-beta.13",
+		"svelte": "^3.44.0",
+		"svelte-geolocation": "^0.3.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@line/liff": "^2.18.1",
+		"moment": "^2.29.1",
+		"svelte-material-ui": "^6.0.0-beta.13"
+	}
+}

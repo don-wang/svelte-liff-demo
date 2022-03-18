@@ -1,0 +1,32 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*
+* -- BASE STYLES --
+* Most of these are inherited from Base, but I want to change a few.
+*/
+body {
+	line-height: 1.7em;
+	font-size: 13px;
+	font-feature-settings: 'palt';
+	-webkit-font-smoothing: antialiased;
+	color: #074199;
+	font-family: YakuHanJP, 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック Medium',
+		'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+		'Meiryo UI', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+	color: #34495e;
+}
