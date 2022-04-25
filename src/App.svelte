@@ -118,12 +118,11 @@
     if (!liff.isInClient()) {
       errorMessage =
         "The App is not opened in LINE, LIFF function will not work and will use Mocked User Info \n To open in line, use the QR below";
-    }
-    if (liff.isLoggedIn()) {
-      profile = await liff.getProfile();
-    } else {
       // Run Login and Retrieve mock profile
       liff.login();
+      profile = await liff.getProfile();
+    } else {
+      liff.$mock.clear();
       profile = await liff.getProfile();
     }
   });
