@@ -20,10 +20,10 @@
   let errorMessage = "";
 
   async function init() {
-    console.log(agent);
+    let mock = agent.includes("LIFF") ? false : true;
     return await liff.init({
       liffId: import.meta.env.VITE_LIFF_ID,
-      mock: true,
+      mock: mock,
     });
   }
 
