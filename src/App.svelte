@@ -14,11 +14,13 @@
     getProfile: { displayName: "Cony *Mocked", userId: "1234" },
   }));
 
+  const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
   let errorMessage = "";
 
   async function init() {
+    console.log(agent);
     return await liff.init({
       liffId: import.meta.env.VITE_LIFF_ID,
       mock: true,
@@ -154,6 +156,10 @@
         <strong>GPS</strong>
         :<span>{JSON.stringify(coords)}</span>
       </li>
+      <li>
+        <strong>User Agent</strong>
+        :<span>{agent}</span>
+      </li>
     </ul>
     <h4 class="error">{errorMessage}</h4>
     <hr />
@@ -207,5 +213,15 @@
   }
   ul {
     list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 5px;
+    border: 1px solid #dddddd;
+  }
+  li span {
+    margin: 5px;
   }
 </style>
