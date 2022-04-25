@@ -22,7 +22,9 @@
     });
   }
 
-  let promise = init();
+  let promise = init().then(async () => {
+    profile = await liff.getProfile();
+  });
 
   const setLiffMock = () => {
     liff.$mock.set((p) => ({
@@ -128,20 +130,10 @@
       setLiffMock();
       liff.login();
       profile = await liff.getProfile();
-      window.alert("not liff");
-    } else {
-      window.alert("in liff");
-      profile = await liff.getProfile();
-      window.alert("got profile");
     }
-
-    window.alert("code here");
   });
 </script>
 
-<svelte:head>
-  <title>LIFF Demo</title>
-</svelte:head>
 <Geolocation getPosition bind:coords />
 <main>
   <h1>Liff Demo</h1>
