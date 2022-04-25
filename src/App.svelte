@@ -7,6 +7,7 @@
 
   import { onMount } from "svelte";
 
+  liff.use(new LIFFInspectorPlugin());
   liff.use(new LiffMockPlugin());
 
   const agent = navigator.userAgent;
