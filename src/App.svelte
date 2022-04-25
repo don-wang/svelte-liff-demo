@@ -7,8 +7,12 @@
 
   import { onMount } from "svelte";
 
-  liff.use(new LIFFInspectorPlugin());
   liff.use(new LiffMockPlugin());
+  liff.use(
+    new LIFFInspectorPlugin({
+      origin: "wss://0841-153-246-254-197.jp.ngrok.io",
+    })
+  );
 
   const agent = navigator.userAgent;
   let coords = [0, 0];
