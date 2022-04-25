@@ -10,7 +10,9 @@
   liff.use(new LiffMockPlugin());
   liff.use(
     new LIFFInspectorPlugin({
-      origin: "wss://0841-153-246-254-197.jp.ngrok.io",
+      origin: import.meta.env.VITE_LI_ORIGIN
+        ? import.meta.env.VITE_LI_ORIGIN
+        : "ws://localhost:9222",
     })
   );
 
