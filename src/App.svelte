@@ -18,7 +18,7 @@
     let mock = agent.includes("LIFF") ? false : true;
     return await liff.init({
       liffId: import.meta.env.VITE_LIFF_ID,
-      mock: mock,
+      mock,
     });
   }
 
@@ -119,7 +119,9 @@
         });
     }
   };
+
   onMount(async () => {
+    console.log(liff);
     if (!liff.isInClient()) {
       errorMessage =
         "The App is not opened in LINE, LIFF function will not work and will use Mocked User Info \n To open in line, use the QR below";
@@ -129,6 +131,8 @@
       profile = await liff.getProfile();
     } else {
       liff.$mock.clear();
+      window.alert(liff.isLoggedIn());
+      window.alert(liff.getProfile());
       profile = liff.getProfile();
     }
   });
@@ -145,7 +149,7 @@
   {:then}
     <p>LIFF init succeeded.</p>
     <div class="button">
-      <button on:click={() => sendMessage()}>Send Message</button>
+      <button on:click={sendMessage}>Send Message</button>
       <button on:click={closeWindow}>Close</button>
     </div>
 
