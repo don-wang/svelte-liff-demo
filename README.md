@@ -1,4 +1,4 @@
-# A Demo LIFF App build with Svelte Kit
+# A Demo LIFF App build with Svelte
 
 ## Demo
 
