@@ -131,8 +131,6 @@
       window.alert("not liff");
     } else {
       window.alert("in liff");
-      window.alert(liff.isLoggedIn());
-      window.alert(liff.getProfile());
       profile = await liff.getProfile();
       window.alert("got profile");
     }
