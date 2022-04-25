@@ -9,11 +9,6 @@
 
   liff.use(new LiffMockPlugin());
 
-  liff.$mock.set((p) => ({
-    ...p,
-    getProfile: { displayName: "Cony *Mocked", userId: "1234" },
-  }));
-
   const agent = navigator.userAgent;
   let coords = [0, 0];
   let profile = {};
@@ -29,6 +24,13 @@
 
   let promise = init();
 
+  const setLiffMock = () => {
+    liff.$mock.set((p) => ({
+      ...p,
+      getProfile: { displayName: "Cony *Mocked", userId: "1234" },
+    }));
+  };
+
   const closeWindow = () => {
     if (!liff.isInClient()) {
       window.alert(errorMessage);
@@ -36,6 +38,7 @@
       liff.closeWindow();
     }
   };
+
   const sendMessage = () => {
     const today = moment().format("MM/DD");
     const message = [
@@ -121,11 +124,12 @@
       errorMessage =
         "The App is not opened in LINE, LIFF function will not work and will use Mocked User Info \n To open in line, use the QR below";
       // Run Login and Retrieve mock profile
+      setLiffMock();
       liff.login();
       profile = await liff.getProfile();
     } else {
       liff.$mock.clear();
-      profile = await liff.getProfile();
+      profile = liff.getProfile();
     }
   });
 </script>
